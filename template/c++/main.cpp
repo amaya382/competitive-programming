@@ -32,4 +32,4 @@ int main() {
 //priority_queue<int, vector<int>, greater<int>>
 //pq.top(); pq.pop();
 //q.front(); q.pop();
-//do{}while(next_permutation(ALL(xs)));
+//sort(ALL(xs)); do{}while(next_permutation(ALL(xs)));
