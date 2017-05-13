@@ -1,5 +1,3 @@
-// 3WA
-
 import scala.collection.mutable._
 object Main extends App {
   val N = Scanner.nextInt // |V|
@@ -15,12 +13,16 @@ object Main extends App {
     if (V(e._1) < V(n._1) + e._2) V(e._1) = V(n._1) + e._2
   }
   for {
+    _ <- 0 until N
     n <- G // (from, [(to, weight)])
     e <- n._2 // (to, weight)
   } {
-    if (V(n._1) + e._2 > V(e._1)) {
-      println("inf")
-      sys.exit
+    if (V(e._1) < V(n._1) + e._2) {
+      V(e._1) = V(n._1) + e._2
+      if (e._1 == V.size - 1) {
+        println("inf")
+        sys.exit
+      }
     }
   }
   println(V.last)
