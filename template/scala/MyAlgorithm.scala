@@ -1,4 +1,4 @@
-object Utils {
+object MyAlgorithm {
   def nextPermutation[T](buf: collection.mutable.Seq[T])(implicit o: Ordering[T]): Boolean = {
     import Ordering.Implicits._
     val size = buf.size
