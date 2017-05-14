@@ -1,5 +1,6 @@
 import java.{util => ju}
 import scala.collection.{mutable => mu}
+import MyPredef._
 
 object Main extends App {
   val p = new java.io.PrintWriter(System.out)
@@ -7,7 +8,7 @@ object Main extends App {
   p.flush
 }
 
-object Scanner {
+object MyPredef {
   private val buf = new Array[Byte](1024)
   private var ptr = 0
   private var len = 0
