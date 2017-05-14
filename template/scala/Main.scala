@@ -9,6 +9,15 @@ object Main extends App {
 }
 
 object MyPredef {
+  @inline def rep(n: Int, f: => Unit): Unit = {
+    var c = 0
+    while (c < n) { f; c += 1 }
+  }
+  @inline def rep(n: Int, f: Int => Unit): Unit = {
+    var c = 0
+    while (c < n) { f(c); c += 1 }
+  }
+
   private val buf = new Array[Byte](1024)
   private var ptr = 0
   private var len = 0
